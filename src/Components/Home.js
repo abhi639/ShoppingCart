@@ -5,7 +5,7 @@ function Home() {
   return (
     <div>
       <div className='img-cart'>
-  {/* <img src='https://cdn.pixabay.com/photo/2013/07/12/14/53/cart-148964__340.png'/> */}
+  { <img src='https://cdn.pixabay.com/photo/2013/07/12/14/53/cart-148964__340.png'/> }
 
         
       </div>
@@ -23,7 +23,7 @@ function Home() {
          <div className='text-Wrapper item'>
        <span> I-phone</span><br></br>
        
-       margin-left: 30%;
+      
        <span>
         price:$1000
        </span>
