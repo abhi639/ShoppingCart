@@ -4,17 +4,18 @@ const InitialState ={
 
     cartData:[]
 }
-export function cartItem(state=InitialState,action){
+export function cartItem(state=[],action){
 
 switch(action.type){
   
 
     case ADD_TOCART:
-        return {
+        //console.warn("reducer",action)
+        return [
            ...state,
-           cartData:action.data
+         {  cartData:action.data}
 
-        }
+        ]
         break
 
         default: 

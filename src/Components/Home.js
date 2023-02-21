@@ -1,17 +1,18 @@
 import React from 'react'
-import { Form } from 'semantic-ui-react'
-import image from './Images/Shopping-Cart.png'
-function Home() {
+
+
+function Home(props) 
+{  console.warn("home",props.data)
   return (
     <div>
+      <div className='prop-cart'>
+        <span> {props.data.length}</span>     
+
+      </div>
       <div className='img-cart'>
   { <img src='https://cdn.pixabay.com/photo/2013/07/12/14/53/cart-148964__340.png'/> }
 
         
-      </div>
-      <div>
-
-
       </div>
         <h1>Shopping Cart</h1>
         <div className='cart-wraper'>
@@ -21,17 +22,15 @@ function Home() {
          
 
          <div className='text-Wrapper item'>
+
        <span> I-phone</span><br></br>
-       
-      
        <span>
         price:$1000
        </span>
-
          </div>
          <div className='btn-wrapper item'>
 
-            <button className='btn btn-primary'>Add to Cart</button>
+            <button className='btn btn-primary'onClick={()=>props.addToCartHandler({price:1000,name:'i-phone-11'})}>Add to Cart</button>
 
          </div>
         </div>

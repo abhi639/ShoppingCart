@@ -1,8 +1,8 @@
 import { ADD_TOCART } from "../constants"
 
-const addToCart=(data)=>{
+export const addToCart=(data)=>{
 
-
+console.warn("action",data)
     return{
       type:ADD_TOCART,
       data:{data}
